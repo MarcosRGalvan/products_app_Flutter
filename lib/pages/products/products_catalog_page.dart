@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:products_app/models/product_catalog.dart';
-import 'package:products_app/pages/product_detail_page.dart';
+import 'package:products_app/pages/products/product_detail_page.dart';
 import 'package:products_app/pages/widgets/app_drawer.dart';
 import 'package:products_app/services/api_service.dart';
 
@@ -75,7 +75,7 @@ class _ProductsCataloPage extends State<ProductsCatalogPage> {
                 fillColor: Colors.white,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(30),
-                  borderSide: BorderSide.none,
+                  //borderSide: BorderSide.none,
                 ),
               ),
             ),

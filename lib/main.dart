@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:products_app/pages/customers_catalog_page.dart';
+import 'package:products_app/pages/customers/customers_catalog_page.dart';
 import 'package:products_app/pages/home_page.dart';
-import 'package:products_app/pages/products_catalog_page.dart';
+import 'package:products_app/pages/products/products_catalog_page.dart';
 
 void main() {
   runApp(const MainApp());

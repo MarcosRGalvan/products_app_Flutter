@@ -10,7 +10,7 @@ class AppDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           const DrawerHeader(
-            decoration: BoxDecoration(color: Colors.red),
+            decoration: BoxDecoration(color: Colors.redAccent),
             child: Text(
               'Menú de Navegación',
               style: TextStyle(color: Colors.white, fontSize: 24),

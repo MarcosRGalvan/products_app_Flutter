@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:products_app/models/customers_catalog.dart';
+import 'package:products_app/pages/customers/customers_detail_page.dart';
 import 'package:products_app/pages/widgets/app_drawer.dart';
 import 'package:products_app/services/api_service.dart';
 
@@ -73,7 +74,7 @@ class _CustomersCatalogPage extends State<CustomersCatalogPage> {
                 fillColor: Colors.white,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(30),
-                  borderSide: BorderSide.none,
+                  //borderSide: BorderSide.none,
                 ),
               ),
             ),
@@ -88,14 +89,14 @@ class _CustomersCatalogPage extends State<CustomersCatalogPage> {
                 itemBuilder: (context, index) {
                   final customer = _clientesFiltrados[index];
                   return GestureDetector(
-                    /*onTap: () => {
+                    onTap: () => {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (_) => 
+                          builder: (_) => CustomersDetailPage(customer: customer),
                         ),
-                      );
-                    }*/
+                      )
+                    },
                     child: Container(
                       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                       decoration: BoxDecoration(
@@ -119,6 +120,26 @@ class _CustomersCatalogPage extends State<CustomersCatalogPage> {
                               style: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const SizedBox(height: 4),
+                            
+                            Text(
+                              customer.address,
+                              style: const TextStyle(
+                                fontSize: 16,
+                                color: Colors.grey
+                              ),
+
+                            ),
+                            const SizedBox(height: 8),
+
+                            Text(
+                              customer.company,
+                              style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.teal,
                               ),
                             ),
                           ],
